@@ -1,0 +1,116 @@
+/* ===== GERAL ===== */
+/* O asterisco (*) aplica regras para TODOS os elementos do site */
+* {
+    margin: 0; /* Tira as margens automáticas do navegador */
+    padding: 0; /* Tira os espaçamentos automáticos do navegador */
+    box-sizing: border-box; /* Garante que as bordas não aumentem o tamanho total das caixas */
+}
+
+/* Regras para o corpo inteiro da página */
+body {
+    background-color: #081f33; /* Cor de fundo azul escuro simples */
+    color: white; /* Cor da letra geral será branca */
+    font-family: Arial, sans-serif; /* Fonte simples e segura */
+    padding: 20px; /* Dá um espaço nas bordas da tela para nada ficar colado */
+    text-align: center; /* Centraliza a maioria dos textos da página */
+}
+
+/* ===== CADASTRO ===== */
+/* Regras para a caixinha de cadastro */
+#telaCadastro {
+    background-color: #132f4b; /* Fundo um pouco mais claro que o body */
+    border: 2px solid #e2a74d; /* Borda laranja (cor de ouro do One Piece) */
+    border-radius: 10px; /* Arredonda as pontas da caixa */
+    width: 400px; /* Largura fixa da caixa */
+    margin: 50px auto; /* Centraliza a caixa na tela */
+    padding: 20px; /* Espaço dentro da caixa */
+}
+
+/* Regras para os campos de digitar e escolher dificuldade */
+#telaCadastro input,
+#telaCadastro select {
+    width: 100%; /* Ocupa toda a largura disponível na caixa */
+    padding: 10px; /* Deixa o campo mais gordinho por dentro */
+    margin-top: 10px; /* Dá um espaço em cima para separar do elemento anterior */
+    border-radius: 5px; /* Arredonda levemente as bordas */
+}
+
+/* ===== BOTÕES ===== */
+/* Regras para todos os botões do site */
+button {
+    margin-top: 20px; /* Espaço para cima */
+    padding: 10px 20px; /* 10px em cima/baixo e 20px dos lados (deixa o botão retangular) */
+    background-color: #ffb84d; /* Cor de fundo laranja claro */
+    color: black; /* Letra do botão preta */
+    border: none; /* Tira aquela borda feia padrão do navegador */
+    border-radius: 5px; /* Arredonda as pontas */
+    font-weight: bold; /* Deixa a letra em negrito */
+    cursor: pointer; /* Transforma a setinha do mouse numa mãozinha ao passar por cima */
+}
+
+/* O que acontece quando o mouse PASSA POR CIMA (hover) do botão */
+button:hover {
+    background-color: #ff7b42; /* Fica laranja mais escuro pra dar efeito de botão clicável */
+}
+
+/* ===== JOGO ===== */
+/* Título principal do jogo */
+h1 {
+    color: #ffe08a; /* Amarelo dourado */
+    margin-bottom: 20px; /* Espaço abaixo do título */
+}
+
+/* ===== PAINÉIS (Placar, Tempo, etc) ===== */
+/* A caixa que segura os 4 placares */
+.painel-info {
+    display: flex; /* Coloca os elementos filhos lado a lado */
+    justify-content: center; /* Centraliza todos eles no meio da tela */
+    gap: 15px; /* Cria um buraco (espaço) de 15px entre cada placar */
+    margin-bottom: 20px; /* Espaço abaixo dos placares */
+}
+
+/* Estilo individual de cada textinho do placar */
+.painel-info h3 {
+    background-color: #1f4f77; /* Azul claro */
+    padding: 10px 15px; /* Gordinho por dentro */
+    border: 1px solid white; /* Borda branca fina */
+    border-radius: 10px; /* Pontas arredondadas */
+}
+
+/* ===== TABULEIROS ===== */
+/* A caixa que segura os dois tabuleiros pra eles ficarem lado a lado */
+#tabuleiros {
+    display: flex; /* Coloca lado a lado */
+    justify-content: center; /* Centraliza na tela */
+    gap: 30px; /* Espaço entre o tabuleiro do Jogador 1 e do Jogador 2 */
+}
+
+/* Fundo da área onde a tabela é desenhada */
+.tabuleiro-container {
+    background-color: #102c46; /* Fundo azul médio */
+    padding: 15px; /* Espaço interno */
+    border: 2px solid #4f86b5; /* Borda azul clara */
+    border-radius: 10px; /* Arredonda as pontas */
+}
+
+/* Deixa o nome do jogador em cima do tabuleiro dourado */
+.tabuleiro-container h2 {
+    color: #ffd166;
+    margin-bottom: 10px;
+}
+
+/* ===== TABELA DE IMAGENS ===== */
+/* As imagens do jogo (os quadradinhos) */
+#tabuleiro1 img,
+#tabuleiro2 img {
+    width: 45px; /* Largura da imagem */
+    height: 45px; /* Altura da imagem (fica um quadrado) */
+    border: 1px solid black; /* Borda preta em cada quadradinho */
+    cursor: pointer; /* Mãozinha ao passar o mouse */
+}
+
+/* Efeito ao passar o mouse em um quadradinho que não foi clicado */
+#tabuleiro1 img:hover,
+#tabuleiro2 img:hover {
+    border: 2px solid white; /* Borda fica branca pra mostrar onde o mouse tá */
+}

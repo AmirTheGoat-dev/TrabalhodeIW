@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo Naval - One Piece</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="telaCadastro">
+    <h2>Cadastro</h2>
+    
+    <label><input type="radio" name="modo" value="single" checked> 1 Jogador</label>
+    <label><input type="radio" name="modo" value="multi"> 2 Jogadores</label>
+
+    <div id="cadastroSingle">
+        <input type="text" id="jogador1" placeholder="Nome do Jogador">
+    </div>
+
+    <div id="cadastroMulti" style="display:none;">
+        <input type="text" id="jogador1multi" placeholder="Nome do Jogador 1">
+        <input type="text" id="jogador2multi" placeholder="Nome do Jogador 2">
+    </div>
+
+    <select id="dificuldade">
+        <option value="facil">Fácil</option>
+        <option value="medio">Médio</option>
+        <option value="dificil">Difícil</option>
+    </select>
+    
+    <button onclick="confirmarCadastro()">Começar Jogo</button>
+</div>
+
+<div id="jogo" style="display:none;">
+    <h1>Batalhas One Piece</h1>
+    
+    <div class="painel-info">
+        <h3 id="painelVidas"></h3>
+        <h3 id="painelPontuacao"></h3>
+        <h3 id="cronometro"></h3>
+        <h3 id="painelJogadas">Jogadas: 0</h3>
+    </div>
+
+    <div id="tabuleiros">
+        <div class="tabuleiro-container">
+            <h2 id="tituloJogador1"></h2>
+            <div id="tabuleiro1"></div>
+        </div>
+        
+        <div class="tabuleiro-container" id="tituloJogador2Container" style="display:none;">
+            <h2 id="tituloJogador2"></h2>
+            <div id="tabuleiro2"></div>
+        </div>
+    </div>
+
+    <button onclick="reiniciarJogo()">Recomeçar Jogo</button>
+</div>
+
+<audio id="musicaFundo" loop>
+    <source src="sounds/overtaken.mp3" type="audio/mpeg">
+</audio>
+<audio id="somBomba">
+    <source src="sounds/bomba.mp3" type="audio/mpeg"> 
+</audio>
+<audio id="somNavio">
+    <source src="sounds/navio.mp3" type="audio/mpeg"> 
+</audio>
+<audio id="somAgua">
+    <source src="sounds/agua.mp3" type="audio/mpeg"> 
+</audio>
+
+<script src="script.js"></script>
+
+</body>
+</html>
