@@ -105,3 +105,27 @@ h1 {
 #tabuleiro2 img:hover {
     border: 2px solid white;
 }
+@media (max-width: 768px) {
+    #telaCadastro {
+        width: 90%; /* Ocupa quase toda a tela em dispositivos móveis */
+        margin: 20px auto;
+    }
+
+    #tabuleiros {
+        flex-direction: column; /* Coloca um tabuleiro embaixo do outro */
+        align-items: center;
+        gap: 20px;
+    }
+
+    .painel-info {
+        flex-wrap: wrap; /* Quebra as informações em várias linhas se necessário */
+    }
+}
+
+@media (max-width: 480px) {
+    #tabuleiro1 img,
+    #tabuleiro2 img {
+        width: 35px; /* Diminui um pouco o tamanho das imagens em telas muito pequenas */
+        height: 35px;
+    }
+}
