@@ -251,16 +251,16 @@ function atualizarPaineis() {
 
 function verificarVitoria() {
     if (modo === "single" && vidas1 <= 0)
-        return desativarCliques(`☠️ GAME OVER ☠️ ${nomeJogador1} perdeu!`);
+        return desativarCliques(`${nomeJogador1} perdeu!`);
 
     if (modo === "multi" && vidas1 <= 0 && vidas2 <= 0)
-        return desativarCliques("☠️ GAME OVER ☠️");
+        return desativarCliques("perderam");
 
     if (navios1 === 30)
-        return desativarCliques(`🏆 ${nomeJogador1} encontrou o One Piece!`);
+        return desativarCliques(`${nomeJogador1} encontrou o One Piece!`);
 
     if (navios2 === 30)
-        return desativarCliques(`🏆 ${nomeJogador2} encontrou o One Piece!`);
+        return desativarCliques(`${nomeJogador2} encontrou o One Piece!`);
 }
 
 function desativarCliques(mensagem) {
